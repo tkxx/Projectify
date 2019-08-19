@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css?family=Space+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Rubik+Mono+One&display=swap");
+@import "~bootstrap/scss/bootstrap.scss";
+$font-stack: "Space Mono", monospace;
+
+.modal-dialog {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.login-img {
+  background-size: 5px 5px;
+}
+
+//content inside modal can only be customized within react-bootstrap classes
+
+.login-form {
+  font-family: $font-stack;
+}
+
+.sign-up-link {
+  font-family: $font-stack;
+
+  a {
+    color: #7e3bb5;
+
+    &:hover {
+      color: #ff6464;
+      text-decoration: none;
+    }
+  }
+}

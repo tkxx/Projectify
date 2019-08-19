@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css?family=Space+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Rubik+Mono+One&display=swap");
+@import "~bootstrap/scss/bootstrap.scss";
+$font-stack: "Space Mono", monospace;
+
+.body-homepage {
+  display: flex;
+  background-image: url(homepageBG.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.wallpaper-homepage {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.navbar {
+  width: 100%;
+}
+
+.title {
+  font-family: "Rubik Mono One", sans-serif;
+  display: flex;
+  justify-content: center;
+  // align-items: flex-end;
+  margin-top: 25vh;
+  // margin-left: 6vw;
+  color: #fac285;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.title-name {
+  font-size: 5em;
+  align-items: center;
+}
+
+.subheading {
+  font-family: $font-stack;
+  font-size: 2em;
+  color: #d9b9f6;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.clearfix {
+  overflow: auto;
+}
+
+.homepage-navbar {
+  font-family: $font-stack;
+  background: rgb(1, 2, 78);
+  background: linear-gradient(
+    90deg,
+    rgba(1, 2, 78, 1) 0%,
+    rgba(84, 56, 100, 1) 69%,
+    rgba(139, 67, 103, 1) 100%
+  );
+}
+
+.nav-links {
+  width: 100px;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  li {
+    display: inline-block;
+    font-family: $font-stack;
+    color: white;
+    margin-right: 20px;
+  }
+
+  a {
+    display: inline-block;
+    padding: 6px 12px;
+    text-decoration: none;
+    color: white;
+
+    hover: {
+      color: #ff6464;
+    }
+  }
+}
+
+.buttons {
+  // margin-top: 10vh;
+  margin-left: 28vw;
+  margin-right: 30vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.btn {
+  background-color: white;
+  justify-content: space-around;
+}
+
+.homepage-buttons {
+  font-family: $font-stack;
+  color: white;
+}
+
+.nav-link-hover-bg {
+  color: #ff6464;
+}

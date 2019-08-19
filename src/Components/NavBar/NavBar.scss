@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css?family=Space+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Rubik+Mono+One&display=swap");
+@import "~bootstrap/scss/bootstrap.scss";
+$font-stack: "Space Mono", monospace;
+
+.navbar-body {
+  width: 100%;
+}
+
+.header-container {
+  border: 1px solid black;
+  position: relative;
+  background: rgb(1, 2, 78);
+  background: linear-gradient(
+    90deg,
+    rgba(1, 2, 78, 1) 0%,
+    rgba(84, 56, 100, 1) 69%,
+    rgba(139, 67, 103, 1) 100%
+  );
+}
+
+.nav-title {
+  font-family: "Rubik Mono One", sans-serif;
+  color: #8b4367;
+}
+
+.link-font {
+  color: #c83660;
+}
+
+// .nav-links
+.navbar-nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    display: inline-block;
+    font-family: $font-stack;
+    color: #c83660;
+    margin-right: 20px;
+  }
+
+  a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+    color: #c83660;
+
+    &:hover {
+      color: #ff6464;
+    }
+  }
+}
+
+.mr-auto {
+  color: white;
+}

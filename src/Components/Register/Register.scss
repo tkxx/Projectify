@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css?family=Space+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Rubik+Mono+One&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+@import "~bootstrap/scss/bootstrap.scss";
+$font-stack: "Space Mono", monospace;
+
+.register-body {
+  display: flex;
+  background-image: url(purpleBG.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  justify-content: space-between;
+}
+
+.wallpaper-register {
+  width: 100vw;
+}
+
+.container {
+  // border: 3px solid green;
+  position: relative;
+  top: -15em;
+}
+
+.register-portion {
+  vertical-align: top;
+  display: inline-block;
+  text-align: center;
+}
+
+.register-title {
+  font-family: "Rubik Mono One", sans-serif;
+  font-size: 3em;
+  // margin-top: 3.4em;
+  color: white;
+  display: inline-block;
+  position: relative;
+  // top: 50px;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+.register-form {
+  font-family: "Montserrat", sans-serif;
+  color: #5ee5cf;
+  font-size: 1em;
+}
+
+.register-left-side {
+  vertical-align: top;
+  display: inline-block;
+  text-align: center;
+}
+
+.register-description {
+  color: white;
+  display: block;
+  line-height: 1.5;
+  font-weight: bold;
+  font-style: italic;
+  font-family: $font-stack;
+  font-size: 1.5em;
+}
+
+.btn {
+  font-family: $font-stack;
+  margin-top: 20px;
+}
+
+.navbar {
+  background-color: #01024e;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+
+  ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
+  }
+
+  li {
+    display: inline-block;
+    font-family: $font-stack;
+    margin-right: 20px;
+    color: white;
+  }
+
+  a {
+    display: inline-block;
+    padding: 6px 12px;
+    text-decoration: none;
+    color: white;
+
+    &:hover {
+      color: #ff6464;
+      text-decoration: none;
+    }
+  }
+}

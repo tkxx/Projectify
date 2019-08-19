@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css?family=Space+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Rubik+Mono+One&display=swap");
+@import "~bootstrap/scss/bootstrap.scss";
+$font-stack: "Space Mono", monospace;
+
+.header {
+  background-image: url(dashboard-header.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 3em;
+  padding-bottom: 3em;
+  width: 100%;
+  display: flex;
+}
+
+.heading {
+  font-family: "Rubik Mono One", sans serif;
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.card-title {
+  font-family: $font-stack;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  a {
+    color: #543864;
+    text-decoration: none;
+  }
+}
+
+.card-description {
+  font-family: $font-stack;
+}
+
+.navbar {
+  display: flex;
+  width: 100%;
+}

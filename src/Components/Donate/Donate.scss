@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css?family=Space+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Rubik+Mono+One&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+@import "~bootstrap/scss/bootstrap.scss";
+$font-stack: "Space Mono", monospace;
+
+.body-donate {
+  display: flex;
+}
+
+.body-wallpaper {
+  background-image: url(donateNightBG.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.container {
+  padding: 26% 5% 0% 0%;
+}
+
+.donate-plea {
+  font-family: "Montserrat", sans-serif;
+  color: #a9c6de;
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.donate-heading {
+  font-family: "Rubik Mono One", sans-serif;
+  font-size: 2em;
+  color: #a9c6de;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.donate-subheading {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  margin-top: 0px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.stripe {
+  display: flex;
+}
+
+.example {
+  align-items: center;
+}
+
+.checkout {
+  width: 50%;
+  align-items: center;
+}

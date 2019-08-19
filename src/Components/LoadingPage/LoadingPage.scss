@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css?family=Space+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Rubik+Mono+One&display=swap");
+@import "~bootstrap/scss/bootstrap.scss";
+$font-stack: "Space Mono", monospace;
+
+.body {
+  display: flex;
+  justify-content: center;
+}
+
+.loading-page {
+  display: block;
+  text-align: center;
+  margin: auto;
+}
+
+.loading-font {
+  font-family: "Rubik Mono One", sans-serif;
+  font-size: 2em;
+  color: #8bbabb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 50%;
+}
+
+.cow {
+  display: block;
+  margin: 0 auto;
+  padding-top: 13em;
+}

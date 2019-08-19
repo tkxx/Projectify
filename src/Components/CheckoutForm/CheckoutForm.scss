@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css?family=Space+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Rubik+Mono+One&display=swap");
+@import "~bootstrap/scss/bootstrap.scss";
+$font-stack: "Space Mono", monospace;
+
+.checkout {
+  border: 1px dotted white;
+  margin-left: 25%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.purchase-question {
+  font-family: $font-stack;
+  color: white;
+}
+
+.purchase-complete {
+  font-family: "Montserrat", sans-serif;
+  color: black;
+}
