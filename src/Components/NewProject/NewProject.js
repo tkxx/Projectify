@@ -55,12 +55,8 @@ class NewProject extends Component {
     return (
       <Modal className="new-project-page" centered autoFocus {...this.props}>
         {this.state.closeModal && <Redirect to="/user" />}
-        {/* <Modal.Header closeButton onHide={() => this.handleModal()}> */}
         <Modal.Header closeButton onHide={() => this.handleClose()}>
           {" "}
-          {/* <Modal.Title id="contained-modal-title-vcenter">
-            <h3 className="project-title">{this.state.title}</h3>
-          </Modal.Title> */}
         </Modal.Header>
         <Modal.Body>
           <h2>{this.state.title}</h2>
@@ -71,6 +67,7 @@ class NewProject extends Component {
             type="text"
             onChange={this.handleChange}
           />{" "}
+          <p />
           <h5>What is this project about?</h5>
           <input
             name="description"
@@ -80,12 +77,7 @@ class NewProject extends Component {
           />{" "}
           <p />
           <Link to="/user">
-            <button
-              type="submit"
-              className="btn"
-              onClick={this.addProject}
-              // onClick={() => this.handleClose()}
-            >
+            <button type="submit" className="btn" onClick={this.addProject}>
               Submit
             </button>
           </Link>

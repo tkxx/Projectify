@@ -1,42 +1,24 @@
 @import url("https://fonts.googleapis.com/css?family=Space+Mono&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Rubik+Mono+One&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 @import "~bootstrap/scss/bootstrap.scss";
 $font-stack: "Space Mono", monospace;
 
-// .new-project-body {
-//   display: flex;
-// }
+.new-project-body {
+  display: flex;
+  font-family: $font-stack;
+}
 
-// .modal {
-//   display: flex;
-//   align-items: center;
-// }
+h2 {
+  font-family: $font-stack;
+}
+
+h5 {
+  font-family: $font-stack;
+}
 
 // .modal-dialog {
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%) !important;
-// }
-
-//OR
-//Bootstrap modal vertically centre align - CSS only
-
-// .modal {
-//   text-align: center;
-//   padding: 0 !important;
-// // }
-
-// .modal:before {
-//   content: "";
 //   display: inline-block;
-//   height: 100%;
+//   text-align: center;
 //   vertical-align: middle;
-//   margin-right: -4px;
 // }
-
-.modal-dialog {
-  display: inline-block;
-  text-align: center;
-  vertical-align: middle;
-}
