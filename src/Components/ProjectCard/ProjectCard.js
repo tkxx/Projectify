@@ -36,7 +36,7 @@ class ProjectCard extends Component {
         <div className="project-heading">
           <span className="project-title">
             <h1>{projectDisplay}</h1>
-            <br />
+
             <span className="task-display">
               <TasksDisplay
                 project_id={this.props.match.params.id}

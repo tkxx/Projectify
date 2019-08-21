@@ -13,8 +13,8 @@ import NewProject from "../NewProject/NewProject";
 import "./Dashboard.scss";
 
 class Dashboard extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       id: +0,
@@ -33,6 +33,11 @@ class Dashboard extends Component {
     setTimeout(() => {
       this.setState({ isLoading: false });
     }, 1500);
+    this.getProjects();
+    this.getUserSession();
+  };
+
+  getProjects = () => {
     axios
       .get("/api/projects")
       .then(res => {
@@ -40,7 +45,6 @@ class Dashboard extends Component {
         console.log(res.data);
       })
       .catch(err => console.log(err));
-    this.getUserSession();
   };
 
   getUserSession = () => {
@@ -64,7 +68,7 @@ class Dashboard extends Component {
   };
 
   handleModal = () => {
-    this.setState({ showModal: true });
+    this.setState({ showModal: !this.state.showModal });
   };
 
   render() {
@@ -88,7 +92,12 @@ class Dashboard extends Component {
           <button className="btn" onClick={this.handleModal}>
             + Create New Project
           </button>
-          {showModal && <NewProject />}
+          <NewProject
+            show={this.state.showModal}
+            onHide={this.handleModal}
+            handleClose={this.handleModal}
+            getProjects={this.getProjects}
+          />
           {/* </Link> */}
         </div>
         <div className="card-deck">
@@ -116,7 +125,6 @@ class Dashboard extends Component {
                           Delete
                         </button>
                       </Link>
-                      <button className="btn">Edit</button>
                     </Card.Footer>
                   </Card>
                 </CardDeck>

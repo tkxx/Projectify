@@ -47,7 +47,7 @@ class Register extends Component {
             <Navbar.Brand className="nav-title">Projectify</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="mr-auto">
+              <Nav className="ml-auto">
                 <Nav right>
                   <Nav.Link className="link-font">
                     <Link to="/">Homepage</Link>
@@ -62,9 +62,8 @@ class Register extends Component {
           </Navbar>
 
           {this.state.login && <Redirect to="/user" />}
-          <div className="register-img">
-            {/* <img src={registerimg} alt="register img" /> */}
-          </div>
+
+          <div className="register-img" />
           <Container>
             <Row>
               <Col>
@@ -74,7 +73,7 @@ class Register extends Component {
                     <span className="register-description">
                       Fuel is low... <p />
                       Carburetor is malfunctioning... <p />
-                      Earth landing is imminent...
+                      Earth landing is imminent... <p />
                     </span>
                   </p>
                 </div>

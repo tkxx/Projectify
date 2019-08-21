@@ -15,7 +15,7 @@ class Homepage extends Component {
   }
 
   handleModal = () => {
-    this.setState({ showModal: true });
+    this.setState({ showModal: !this.state.showModal });
   };
 
   render() {
@@ -26,8 +26,8 @@ class Homepage extends Component {
           <Navbar bg="dark" expand="lg" variant="light" className="navbar">
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="mr-auto">
-                <Nav right>
+              <Nav className="ml-auto">
+                <Nav>
                   <Nav.Link className="link-font">
                     <Link to="/">Homepage</Link>
                   </Nav.Link>
@@ -43,18 +43,18 @@ class Homepage extends Component {
           <span className="title">
             <h1 className="title-name">Projectify</h1>
           </span>
-          <p className="subheading">Earn points finishing projects.</p>
+          <p className="subheading">Earn points by finishing your projects.</p>
 
           <div className="buttons">
             <Link to="/register">
-              <Button variant="light" bsStyle="btn">
+              <Button variant="light" bsstyle="btn">
                 Register
               </Button>
             </Link>
-            <Button variant="light" bsStyle="btn" onClick={this.handleModal}>
+            <Button variant="light" bsstyle="btn" onClick={this.handleModal}>
               Login
             </Button>
-            {showModal && <Login />}
+            <Login show={this.state.showModal} onHide={this.handleModal} />
           </div>
 
           {/* <div>

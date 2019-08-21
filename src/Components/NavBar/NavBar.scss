@@ -28,6 +28,12 @@ $font-stack: "Space Mono", monospace;
   color: #c83660;
 }
 
+.coins {
+  color: #f0dd92;
+  font-weight: bold;
+  font-family: $font-stack;
+}
+
 // .nav-links
 .navbar-nav {
   ul {
@@ -56,5 +62,5 @@ $font-stack: "Space Mono", monospace;
 }
 
 .mr-auto {
-  color: white;
+  color: #c83660;
 }

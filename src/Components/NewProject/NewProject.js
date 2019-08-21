@@ -1,24 +1,30 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import axios from "axios";
 import { ModalDialog, Modal } from "react-bootstrap";
 import "./NewProject.scss";
 
 class NewProject extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     //NEED HELP HERE TO GET SESSION & PUT TO REDUX
     this.state = {
       user_id: +0,
       title: "",
       description: "",
-      isComplete: false
+      isComplete: false,
+      closeModal: false
     };
   }
 
   handleChange = e => {
     this.setState({ [e.target.name]: e.target.value });
+  };
+
+  handleClose = () => {
+    this.setState({ closeModal: true });
+    console.log(this.state);
   };
 
   componentDidMount = () => {
@@ -29,7 +35,11 @@ class NewProject extends Component {
     let { user_id, title, isComplete, description } = this.state;
     axios
       .post("/api/projects", { user_id, title, isComplete, description })
-      .then(res => console.log(res))
+      .then(res => {
+        console.log(res);
+        this.props.getProjects();
+        this.props.handleClose();
+      })
       .catch(err => console.log(err));
   };
 
@@ -43,39 +53,44 @@ class NewProject extends Component {
 
   render() {
     return (
-      <div className="new-project-body">
-        <ModalDialog centered animation>
-          <Modal.Title id="contained-modal-title-vcenter">
-            <h3 className="project-title">Project Name</h3>
-          </Modal.Title>
-          <Modal.Body>
-            <h2>{this.state.title}</h2>
-            <input
-              name="title"
-              placeholder="Add Project Title"
-              type="text"
-              onChange={this.handleChange}
-            />{" "}
-            <p />
-            <span className="project-description">
-              <h5>What is this project about?</h5>
-              <input
-                name="description"
-                placeholder="Project Description"
-                type="text"
-                onChange={this.handleChange}
-              />{" "}
-            </span>
-          </Modal.Body>
-          <Modal.Footer>
-            <Link to="/user">
-              <button className="btn" onClick={this.addProject}>
-                Submit
-              </button>
-            </Link>
-          </Modal.Footer>
-        </ModalDialog>
-      </div>
+      <Modal className="new-project-page" centered autoFocus {...this.props}>
+        {this.state.closeModal && <Redirect to="/user" />}
+        {/* <Modal.Header closeButton onHide={() => this.handleModal()}> */}
+        <Modal.Header closeButton onHide={() => this.handleClose()}>
+          {" "}
+          {/* <Modal.Title id="contained-modal-title-vcenter">
+            <h3 className="project-title">{this.state.title}</h3>
+          </Modal.Title> */}
+        </Modal.Header>
+        <Modal.Body>
+          <h2>{this.state.title}</h2>
+          <h4 className="login-form">Project Name</h4>{" "}
+          <input
+            name="title"
+            placeholder="Add Project Title"
+            type="text"
+            onChange={this.handleChange}
+          />{" "}
+          <h5>What is this project about?</h5>
+          <input
+            name="description"
+            placeholder="Project Description"
+            type="text"
+            onChange={this.handleChange}
+          />{" "}
+          <p />
+          <Link to="/user">
+            <button
+              type="submit"
+              className="btn"
+              onClick={this.addProject}
+              // onClick={() => this.handleClose()}
+            >
+              Submit
+            </button>
+          </Link>
+        </Modal.Body>
+      </Modal>
     );
   }
 }

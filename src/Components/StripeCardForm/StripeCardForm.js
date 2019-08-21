@@ -12,11 +12,12 @@ const createOptions = () => {
     style: {
       base: {
         fontSize: "16px",
-        color: "#424770",
+        color: white,
         fontFamily: "Open Sans, sans-serif",
+        color: white,
         letterSpacing: "0.025em",
         "::placeholder": {
-          color: "#aab7c4"
+          color: white
         }
       },
       invalid: {

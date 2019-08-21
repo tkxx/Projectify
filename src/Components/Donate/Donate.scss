@@ -9,7 +9,7 @@ $font-stack: "Space Mono", monospace;
 }
 
 .body-wallpaper {
-  background-image: url(donateNightBG.svg);
+  background-image: url(alien.svg);
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
@@ -27,29 +27,29 @@ $font-stack: "Space Mono", monospace;
 
 .donate-plea {
   font-family: "Montserrat", sans-serif;
-  color: #a9c6de;
+  color: #543864;
   font-weight: bold;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-    1px 1px 0 #000;
+  // text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+  //   1px 1px 0 #000;
 }
 
 .donate-heading {
   font-family: "Rubik Mono One", sans-serif;
   font-size: 2em;
-  color: #a9c6de;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-    1px 1px 0 #000;
+  color: #543864;
+  // text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+  //   1px 1px 0 #000;
 }
 
 .donate-subheading {
   font-family: "Montserrat", sans-serif;
-  color: white;
+  color: black;
   margin-top: 0px;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-    1px 1px 0 #000;
+  // text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+  //   1px 1px 0 #000;
 }
 
 .stripe {

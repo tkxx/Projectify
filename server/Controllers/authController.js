@@ -10,7 +10,7 @@ module.exports = {
     if (existingUser) {
       res
         .status(401)
-        .json("Username is already taken. Please choose a different username.");
+        .send("Username is already taken. Please choose a different username.");
     } else {
       const salt = bcrypt.genSaltSync(10);
       const hash = await bcrypt

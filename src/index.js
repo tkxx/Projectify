@@ -10,11 +10,11 @@ import { Provider } from "react-redux";
 import store from "./Redux/store";
 
 ReactDOM.render(
-  // <Provider store={store}>
-  <HashRouter>
-    <App />
-  </HashRouter>,
-  // </Provider>
+  <Provider store={store}>
+    <HashRouter>
+      <App />
+    </HashRouter>
+  </Provider>,
   document.getElementById("root")
 );
 

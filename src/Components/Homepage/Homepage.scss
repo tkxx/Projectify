@@ -30,9 +30,8 @@ $font-stack: "Space Mono", monospace;
   font-family: "Rubik Mono One", sans-serif;
   display: flex;
   justify-content: center;
-  // align-items: flex-end;
+  letter-spacing: 0.3em;
   margin-top: 25vh;
-  // margin-left: 6vw;
   color: #fac285;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
@@ -94,7 +93,6 @@ $font-stack: "Space Mono", monospace;
 }
 
 .buttons {
-  // margin-top: 10vh;
   margin-left: 28vw;
   margin-right: 30vw;
   display: flex;

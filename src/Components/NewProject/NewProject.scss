@@ -22,18 +22,18 @@ $font-stack: "Space Mono", monospace;
 //OR
 //Bootstrap modal vertically centre align - CSS only
 
-.modal {
-  text-align: center;
-  padding: 0 !important;
-}
+// .modal {
+//   text-align: center;
+//   padding: 0 !important;
+// // }
 
-.modal:before {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
-  margin-right: -4px;
-}
+// .modal:before {
+//   content: "";
+//   display: inline-block;
+//   height: 100%;
+//   vertical-align: middle;
+//   margin-right: -4px;
+// }
 
 .modal-dialog {
   display: inline-block;
