@@ -63,8 +63,8 @@ class Login extends Component {
             <h3 className="login-form">Password</h3>{" "}
             <input
               name="password"
-              // type="password"
-              type="text"
+              type="password"
+              // type="text"
               className="text-box"
               onChange={this.handleChange}
             />
