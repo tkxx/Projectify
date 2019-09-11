@@ -32,6 +32,8 @@ app.use(
   })
 );
 
+app.use(express.static(`${__dirname}/../build`));
+
 app.get("/auth/session", authCtrl.getSession);
 
 //USER
