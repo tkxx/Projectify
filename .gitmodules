@@ -1,0 +1,3 @@
+[submodule "/project-manager2"] 
+  path = /project-manager2 
+  url = https://github.com/tkxx/Projectify.git
